@@ -7,7 +7,7 @@ class User < ApplicationRecord
     validates :shop_name
     validates :instagram
     validates :phone_number
-    validates :prefecture_id, numericality: { other_than: 1}
+    validates :prefecture
     validates :city
     validates :house_number
   end
