@@ -1,0 +1,22 @@
+<h2>Log in</h2>
+
+<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"店舗のメールアドレス", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"半角6文字以上" %>
+  </div>
+  <div class="register-btn">
+    <%= f.submit "ログイン", class:"register-btn" %> 
+  </div>
+<% end %>
