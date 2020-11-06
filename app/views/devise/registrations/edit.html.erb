@@ -1,38 +1,95 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_with model: @user, url: user_registration_path, method: :patch, class: 'registration-main', local: true do |f| %>
+
+<%# <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">店舗名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :shop_name, class:"input-default", id:"shop-name", placeholder:"例）shoeshine〇〇店", maxlength:"40" %>
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"店舗のメールアドレス", autofocus: true %>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">現在のパスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :current_password, class:"input-default", id:"current-password", placeholder:"半角6文字以上" %>
   </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"半角6文字以上" %>
   </div>
-
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">パスワード(確認)</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力してください" %>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">インスタグラムのユーザー名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :instagram, class:"input-default", id:"instagram", placeholder:"プロフィールの左上がユーザー名です" %>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">店舗のホームページ</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :homepage, class:"input-default", id:"homepage", placeholder:"店舗ホームページのURL" %>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">電話番号</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :phone_number, class:"input-default", id:"phone-number", placeholder:"電話番号" %>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">都道府県</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:prefecture, Prefecture.all, :name, :name, {}, {class:"select-box", id:"prefecture"}) %>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">市町村</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :city, class:"input-default", id:"city", placeholder:"例）横浜市緑区" %>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">番地</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :house_number, class:"input-default", id:"house-number", placeholder:"例）青山1-1-1" %>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">建物名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :building_name, class:"input-default", id:"building-name", placeholder:"例）柳ビル103" %>
+  </div>
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "編集完了" %>
   </div>
 <% end %>
 
