@@ -1,5 +1,6 @@
 <header class="top-page-header">
     <ul class='lists-right'>
+      <li><%= link_to "ホームへ戻る", root_path%></li>
       <% if user_signed_in? %>
         <li><%= link_to "#{current_user.shop_name}の詳細情報", edit_user_registration_path, class: "shop_name" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
