@@ -6,6 +6,7 @@ function initMap(){
   };
   //google mapの表示
   const map = new google.maps.Map(document.getElementById('map'), options);
+
 };
 
 window.addEventListener("load", initMap);
