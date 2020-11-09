@@ -6,6 +6,13 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="form-group">
     <div class="form-text-wrap">
+      <label class="form-text">お名前</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :user_name, class:"input-default", id:"user-name", placeholder:"例）田中　太郎" %>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
       <label class="form-text">店舗名</label>
       <span class="indispensable">必須</span>
     </div>
@@ -38,55 +45,6 @@
       <span class="indispensable">必須</span>
     </div>
     <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力してください" %>
-  </div>
-  <div class="form-group">
-    <div class="form-text-wrap">
-      <label class="form-text">インスタグラムのユーザー名</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_field :instagram, class:"input-default", id:"instagram", placeholder:"プロフィールの左上がユーザー名です" %>
-  </div>
-  <div class="form-group">
-    <div class="form-text-wrap">
-      <label class="form-text">店舗のホームページ</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_field :homepage, class:"input-default", id:"homepage", placeholder:"店舗ホームページのURL" %>
-  </div>
-  <div class="form-group">
-    <div class="form-text-wrap">
-      <label class="form-text">電話番号</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_field :phone_number, class:"input-default", id:"phone-number", placeholder:"電話番号" %>
-  </div>
-  <div class="form-group">
-    <div class="form-text-wrap">
-      <label class="form-text">都道府県</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.collection_select(:prefecture, Prefecture.all, :name, :name, {}, {class:"select-box", id:"prefecture"}) %>
-  </div>
-  <div class="form-group">
-    <div class="form-text-wrap">
-      <label class="form-text">市町村</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_field :city, class:"input-default", id:"city", placeholder:"例）横浜市緑区" %>
-  </div>
-  <div class="form-group">
-    <div class="form-text-wrap">
-      <label class="form-text">番地</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_field :house_number, class:"input-default", id:"house-number", placeholder:"例）青山1-1-1" %>
-  </div>
-  <div class="form-group">
-    <div class="form-text-wrap">
-      <label class="form-text">建物名</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_field :building_name, class:"input-default", id:"building-name", placeholder:"例）柳ビル103" %>
   </div>
   <div class="actions">
     <%= f.submit "編集完了" %>
