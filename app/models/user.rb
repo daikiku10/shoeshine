@@ -5,10 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   with_options presence: true do
     validates :shop_name
-    validates :instagram
-    validates :phone_number
-    validates :prefecture
-    validates :city
-    validates :house_number
+    validates :user_name
   end
 end
