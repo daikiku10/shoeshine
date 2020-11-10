@@ -6,24 +6,29 @@ function newMap (){
   };
   //google mapの表示
   const map = new google.maps.Map(document.getElementById('new-map'), options);
+  //ジオコーディングのインスタンスの生成
+  const geocoder = new google.maps.Geocoder();
 
-    //クリックイベントを追加
-    // map.addListener('click', function(e) {
-      // getClickLatLng(e.latLng, map);
-
-      
-
-    // function getClickLatLng(lat_lng, map){
-
-    //   document.getElementById('lat').textContent = lat_lng.lat();
-    //   document.getElementById('lng').textContent = lat_lng.lng();
-
-    //   // const marker = new google.maps.Marker({
-    //   //   position: lat_lng,
-    //   //   map: map,
-    //   //   animation: google.maps.Animation.DROP
-    //   });
-    // };
+  map.addListener('click', function(e){
+    //リバースジオコーディングでは location を指定
+    geocoder.geocode({location: e.latLng}, function(results, status){
+      if(status === 'OK' && results[0]) {
+        //マーカーの生成
+        const marker = new google.maps.Marker({
+          position: results[0].geometry.location,
+          map: map,
+          animation: google.maps.Animation.DROP
+        });
+        document.getElementById('lat').value = results[0].geometry.location.lat();
+        document.getElementById('lng').value = results[0].geometry.location.lng();
+      }else if(status === 'ZERO_RESULTS') {
+        alert('不明なアドレスです：' + status);
+        return;
+      }else {
+        alert('失敗しました：' + status);
+      }
+    });
+  });
 };
 
 window.addEventListener("load", newMap);
