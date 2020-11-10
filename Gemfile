@@ -61,3 +61,5 @@ gem 'pry-rails'
 gem 'active_hash'
 
 gem 'geocoder'
+
+gem 'gon'
