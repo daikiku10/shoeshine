@@ -11,7 +11,8 @@
   font-size: 30px;
   display: flex;
   justify-content: space-between;
-  width: 100vw;
+  /* flex-wrap: wrap; */
+  width: 100%;
 }
 
 .lists-left {
@@ -22,6 +23,7 @@
   text-decoration: none;
   font-size: 60px;
   color: white;
+  font-weight: bold;
 }
 
 .lists-right {
@@ -35,9 +37,13 @@
   text-decoration: none;
   margin-right: 3vw;
   color: white;
-  font-weight: bold;
 }
 
+.shop-register {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: white;
+}
 
 .logout {
   text-decoration: none;
@@ -46,7 +52,6 @@
 
 .login {
   text-decoration: none;
-  line-height: 32px;
   margin-right: 3vw;
   color: white;
 }
