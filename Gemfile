@@ -67,3 +67,7 @@ gem 'active_hash'
 gem 'geocoder'
 
 gem 'gon'
+
+group :production do
+  gem 'rails_12factor'
+end
