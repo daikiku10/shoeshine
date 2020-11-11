@@ -2,8 +2,7 @@
 
 <%= form_with model: @user, url: user_registration_path, method: :patch, class: 'registration-main', local: true do |f| %>
 
-<%# <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= render "shared/error_messages", model: f.object %>
   <div class="form-group">
     <div class="form-text-wrap">
       <label class="form-text">お名前</label>
