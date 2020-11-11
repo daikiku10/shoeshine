@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :shop_name
-    validates :user_name
+    validates :user_name, format: {with: /\A[ぁ-んァ-ンー-龥]/}
   end
 
 end
