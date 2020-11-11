@@ -10,5 +10,6 @@ class User < ApplicationRecord
     validates :shop_name
     validates :user_name, format: {with: /\A[ぁ-んァ-ンー-龥]/}
   end
+  validates :password, format: {with: /\A[a-zA-Z0-9]+\z/}
 
 end
