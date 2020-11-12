@@ -1,4 +1,6 @@
 class ShopsController < ApplicationController
+  before_action :authenticate_user!, only: :new
+
   def index
     @shops = Shop.includes(:user)
     gon.shops = @shops
