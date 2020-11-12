@@ -12,7 +12,11 @@ class ShopsController < ApplicationController
 
   def create
     @shop = Shop.new(shop_params)
-    @shop.save
+    if @shop.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
