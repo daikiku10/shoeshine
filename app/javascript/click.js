@@ -17,7 +17,8 @@ function newMap (){
         const marker = new google.maps.Marker({
           position: results[0].geometry.location,
           map: map,
-          animation: google.maps.Animation.DROP
+          animation: google.maps.Animation.DROP,
+          icon: "https://maps.google.com/mapfiles/ms/micons/blue-dot.png"
         });
         document.getElementById('lat').value = results[0].geometry.location.lat();
         document.getElementById('lng').value = results[0].geometry.location.lng();

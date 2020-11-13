@@ -3,6 +3,8 @@ class ShopsController < ApplicationController
 
   def index
     @shops = Shop.includes(:user)
+    @users = User.all
+    gon.users = @users
     gon.shops = @shops
   end
 
