@@ -5,44 +5,45 @@
 .top-page-header {
   background-color: #333333;
   width: 100vw;
+  padding: 2vh 10vw;
 }
 
-.nav {
-  font-size: 30px;
+.header {
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
-  width: 100%;
-}
-
-.lists-left {
-  list-style: none;
+  align-items: center;
 }
 
 .title {
+}
+
+.title-name {
   text-decoration: none;
-  font-size: 60px;
   color: white;
-  font-weight: bold;
+  font-size: 30px;
+}
+
+.nav {
 }
 
 .lists-right {
-  list-style: none;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
 }
 
 .shop-name {
   text-decoration: none;
-  margin-right: 3vw;
   color: white;
+}
+
+.shop-name-title {
+  margin-right: 5vw;
 }
 
 .shop-register {
   text-decoration: none;
-  margin-right: 3vw;
   color: white;
+  margin-right: 2vw;
 }
 
 .logout {
@@ -52,8 +53,8 @@
 
 .login {
   text-decoration: none;
-  margin-right: 3vw;
   color: white;
+  margin-right: 2vw;
 }
 
 .sign-up {

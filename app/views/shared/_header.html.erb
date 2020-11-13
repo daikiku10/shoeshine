@@ -1,18 +1,22 @@
 <header class="top-page-header">
-  <div class="nav">
-    <ul class="lists-left">
-      <li><%= link_to "shoeshine", root_path, class: "title" %></li>
-    </ul>
-
-    <ul class='lists-right'>
-      <% if user_signed_in? %>
-        <li><%= link_to "#{current_user.shop_name}の詳細変更", edit_user_registration_path, class: "shop-name" %></li>
-        <li><%= link_to 'お店の登録へ', new_shop_path, class: "shop-register" %>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-      <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <% end %>
-    </ul>
-  <div >
+  <div class="header">
+    <div class="title">
+      <%= link_to "shoeshine", root_path, class:"title-name"%>
+    </div>
+    
+    <div class="nav">
+      <ul class='lists-right'>
+        <% if user_signed_in? %>
+          <div class="shop-name-title">
+            <%= link_to "詳細変更", edit_user_registration_path, class: "shop-name" %>
+          </div>
+          <li><%= link_to '店舗登録', new_shop_path, class: "shop-register" %>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        <% end %>
+      </ul>
+    <div >
+  </div>
 </header>
