@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../map")
 require("../click")
+require("../btn")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
