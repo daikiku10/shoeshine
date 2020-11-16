@@ -34,36 +34,51 @@
 .shop-name {
   text-decoration: none;
   color: white;
-  margin-right: 5vw;
+  margin-right: 2vw;
+  border: 1px white solid;
+  border-radius: 3px;
+  padding: 0.4em 1.6em;
 }
 
 .insta-login {
   text-decoration: none;
   color: white;
-}
-
-.shop-name-title {
-  margin-right: 5vw;
+  margin-right: 2vw;
+  border: 1px white solid;
+  border-radius: 3px;
+  padding: 0.4em 1.6em;
 }
 
 .shop-register {
   text-decoration: none;
   color: white;
   margin-right: 2vw;
+  border: 1px white solid;
+  border-radius: 3px;
+  padding: 0.4em 1.6em;
 }
 
 .logout {
   text-decoration: none;
   color: white;
+  border: 1px white solid;
+  border-radius: 3px;
+  padding: 0.4em 1.6em;
 }
 
 .login {
   text-decoration: none;
   color: white;
   margin-right: 2vw;
+  border: 1px white solid;
+  border-radius: 3px;
+  padding: 0.4em 1.6em;
 }
 
 .sign-up {
   text-decoration: none;
   color: white;
+  border: 1px white solid;
+  border-radius: 3px;
+  padding: 0.4em 1.6em;
 }
