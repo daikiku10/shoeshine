@@ -1,6 +1,10 @@
-<h1>お店の登録</h1>
-
-<%= form_with model: @shop, local: true do |f| %>
+<%= form_with model: @shop, class: 'registration-main', local: true do |f| %>
+<div class="form-wrap">
+  <div class="form-header">
+    <h1 class="form-header-text">
+      店舗情報入力
+    </h1>
+  </div>
 
   <%= render 'shared/error_messages', model: f.object %>
 
@@ -16,7 +20,7 @@
       <label class="form-text">電話番号</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_field :phone_number, class:"input-default", id:"phone-number", placeholder:"09012345678 ハイフン不要" %>
+    <%= f.text_field :phone_number, class:"input-default", id:"phone-number", placeholder:"例）09012345678 ハイフン不要" %>
   </div>
   <div class="form-group">
     <div class="form-text-wrap">
@@ -25,20 +29,19 @@
     </div>
     <%= f.text_field :instagram, class:"input-default", id:"instagram", placeholder:"ユーザーページの左上" %>
   </div>
-  <div class="form-group">
-    <div class="form-text-wrap">
-      <label class="form-text">お店の場所をクリックしてください</label>
+  <div class="form-group-map">
+    <div class="form-text-wrap-map">
+      <label class="form-text-map">お店の場所をクリックしてください</label>
       <span class="indispensable">必須</span>
       <div id="new-map"></div>
       <%= f.hidden_field :lat, value: "", id:"lat" %>
       <%= f.hidden_field :lng, value: "", id:"lng" %>
     </div>
   </div>
-  <div class="register-btn">
-    <%= f.submit "店舗登録", class:"register-btn" %> 
+  <div class="shop-btn">
+    <%= f.submit "店舗登録", class:"shop-black-btn" %> 
   </div>
-
-  </div>
+</div>
 
 
 <% end %>

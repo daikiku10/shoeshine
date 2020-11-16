@@ -1,7 +1,7 @@
 function newMap (){
   //東京の位置
   const options =  {
-    zoom:15,
+    zoom:8,
     center: {lat:35.681167, lng: 139.767052}
   };
   //google mapの表示
