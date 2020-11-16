@@ -34,6 +34,12 @@
 .shop-name {
   text-decoration: none;
   color: white;
+  margin-right: 5vw;
+}
+
+.insta-login {
+  text-decoration: none;
+  color: white;
 }
 
 .shop-name-title {
