@@ -1,0 +1,15 @@
+.edit-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.edit-black-btn {
+  width: 100%;
+  background: #333333;
+  border: 1px solid white;
+  color: white;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}

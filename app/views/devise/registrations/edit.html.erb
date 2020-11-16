@@ -1,8 +1,13 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
 <%= form_with model: @user, url: user_registration_path, method: :patch, class: 'registration-main', local: true do |f| %>
+<div class="form-wrap">
+  <div class="form-header">
+    <h1 class="form-header-text">
+      会員情報入力
+    </h1>
+  </div>
 
   <%= render "shared/error_messages", model: f.object %>
+
   <div class="form-group">
     <div class="form-text-wrap">
       <label class="form-text">お名前</label>
@@ -45,13 +50,8 @@
     </div>
     <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力してください" %>
   </div>
-  <div class="actions">
-    <%= f.submit "編集完了" %>
+  <div class="edit-btn">
+    <%= f.submit "編集完了", class:"edit-black-btn" %>
   </div>
+</div>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
