@@ -3,5 +3,5 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   root to: "shops#index"
-  resources :shops, only: [:index, :new, :create]
+  resources :shops, only: [:index, :new, :create, :edit, :update]
 end
