@@ -58,6 +58,15 @@
   padding: 0.4em 1.6em;
 }
 
+.shop-edit {
+  text-decoration: none;
+  color: white;
+  margin-right: 2vw;
+  border: 1px white solid;
+  border-radius: 3px;
+  padding: 0.4em 1.6em;
+}
+
 .logout {
   text-decoration: none;
   color: white;

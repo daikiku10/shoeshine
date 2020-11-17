@@ -21,6 +21,19 @@ class ShopsController < ApplicationController
     end
   end
 
+  def edit
+    @shop = Shop.find(params[:id])
+  end
+
+  def update
+    @shop = Shop.find(params[:id])
+    if @shop.update(shop_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   private
   def shop_params
     params.require(:shop).permit(:address, :phone_number, :instagram, :lat, :lng).merge(user_id: current_user.id)
