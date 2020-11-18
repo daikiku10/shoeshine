@@ -36,6 +36,7 @@
   width: 50%;
   margin: 0 auto;
   margin-top: 50px;
+  text-align: center;
 }
 
 .shop-black-btn {
@@ -46,4 +47,13 @@
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+  margin-bottom: 4vh;
+}
+
+.back-btn {
+  background-color: rgb(75, 71, 71);
+  border: 1px solid #aaa;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 35%;
 }
