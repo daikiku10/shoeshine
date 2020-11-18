@@ -24,6 +24,8 @@ function newMap (){
         document.getElementById('lng').value = results[0].geometry.location.lng();
         marker.addListener('click', function(){
           marker.setMap(null);
+          document.getElementById('lat').value = null;
+          document.getElementById('lng').value = null;  
         });
       }else if(status === 'ZERO_RESULTS') {
         alert('不明なアドレスです：' + status);
