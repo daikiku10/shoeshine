@@ -22,6 +22,9 @@ function newMap (){
         });
         document.getElementById('lat').value = results[0].geometry.location.lat();
         document.getElementById('lng').value = results[0].geometry.location.lng();
+        marker.addListener('click', function(){
+          marker.setMap(null);
+        });
       }else if(status === 'ZERO_RESULTS') {
         alert('不明なアドレスです：' + status);
         return;
