@@ -42,7 +42,7 @@
     <div class="shop-btn">
       <%= f.submit "店舗登録", class:"shop-black-btn", id:"btn" %>
       <div class="shop-btn-child">
-        <%= link_to 'データを削除', "#", class:"delete-btn", id:"btn" %>
+        <%= link_to 'データを削除', "/shops/#{@shop.id}", method: :delete, class:"delete-btn", id:"btn" %>
       </div> 
       <div>
         <%= link_to 'トップページ', root_path, class:"back-btn", id:"btn" %>
