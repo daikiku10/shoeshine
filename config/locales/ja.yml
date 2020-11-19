@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        shop_name: 店舗名
+        user_name: お名前
+      shop:
+        address: 店舗住所
+        instagram: インスタグラムのユーザー名
+        phone_number: 店舗電話番号
+        lat: 
+        lng: 
