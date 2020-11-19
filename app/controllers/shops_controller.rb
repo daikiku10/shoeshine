@@ -1,6 +1,7 @@
 class ShopsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_shop, only: [:edit, :update, :destroy]
+  before_action :cheak_user, only: :edit
 
   def index
     @shops = Shop.includes(:user)
@@ -49,6 +50,13 @@ class ShopsController < ApplicationController
 
   def set_shop
     @shop = Shop.find(params[:id])
+  end
+
+  def cheak_user
+    @shop = Shop.find(params[:id])
+    unless current_user.id == @shop.user_id
+      redirect_to root_path
+    end
   end
 
 end
