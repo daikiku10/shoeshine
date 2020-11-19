@@ -1,5 +1,6 @@
 class ShopsController < ApplicationController
-  before_action :authenticate_user!, only: :new
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :set_shop, only: [:edit, :update, :destroy]
 
   def index
     @shops = Shop.includes(:user)
@@ -22,11 +23,9 @@ class ShopsController < ApplicationController
   end
 
   def edit
-    @shop = Shop.find(params[:id])
   end
 
   def update
-    @shop = Shop.find(params[:id])
     if @shop.update(shop_params)
       redirect_to root_path
     else
@@ -35,8 +34,8 @@ class ShopsController < ApplicationController
   end
 
   def destroy
-    @shop = Shop.find(params[:id])
-    if @shop.destroy
+    if current_user.id == @shop.user_id
+      @shop.destroy
       redirect_to root_path
     else
       redirect_to root_path
@@ -47,4 +46,9 @@ class ShopsController < ApplicationController
   def shop_params
     params.require(:shop).permit(:address, :phone_number, :instagram, :lat, :lng).merge(user_id: current_user.id)
   end
+
+  def set_shop
+    @shop = Shop.find(params[:id])
+  end
+
 end
