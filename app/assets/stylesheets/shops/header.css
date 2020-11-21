@@ -24,6 +24,7 @@
 }
 
 .nav {
+  width: 100%;
 }
 
 .lists-right {
@@ -31,7 +32,7 @@
   justify-content: flex-end;
 }
 
-.shop-name {
+.insta-login {
   text-decoration: none;
   color: white;
   margin-right: 2vw;
@@ -40,7 +41,7 @@
   padding: 0.4em 1.6em;
 }
 
-.insta-login {
+.shop-name {
   text-decoration: none;
   color: white;
   margin-right: 2vw;
@@ -90,4 +91,94 @@
   border: 1px white solid;
   border-radius: 3px;
   padding: 0.4em 1.6em;
+}
+
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+  .top-page-header {
+    background-color: #333333;
+    width: 100vw;
+    padding: 2vh 7vw;
+  }
+  .title-name {
+    font-size:25px;
+  }
+
+  .insta-login {
+    font-size: 10px;
+    margin-right: 1vw;
+  }
+
+  .shop-name {
+    font-size: 10px;
+    margin-right: 1vw;
+  }
+
+  .shop-register {
+    font-size: 10px;
+    margin-right: 1vw;
+  }
+
+  .shop-edit {
+    font-size: 10px;
+    margin-right: 1vw;
+  }
+
+  .logout {
+    font-size: 10px;
+  }
+
+  .login {
+    font-size: 10px;
+    margin-right: 1vw;
+  }
+
+  .sign-up {
+    font-size: 10px;
+  }
+}
+
+/* スマホ表示 */
+@media (max-width: 599px) {
+  .top-page-header {
+    background-color: #333333;
+    width: 100vw;
+    padding: 2vh 2vw;
+  }
+  .title-name {
+    font-size:15px;
+  }
+
+  .insta-login {
+    font-size: 0.3px;
+    margin-right: 1vw;
+  }
+
+  .shop-name {
+    font-size: 0.3px;
+    margin-right: 1vw;
+  }
+
+  .shop-register {
+    font-size: 0.3px;
+    margin-right: 1vw;
+  }
+
+  .shop-edit {
+    font-size: 0.3px;
+    margin-right: 1vw;
+  }
+
+  .logout {
+    font-size: 0.3px;
+  }
+
+  .login {
+    font-size: 0.3px;
+    margin-right: 1vw;
+  }
+
+  .sign-up {
+    font-size: 0.3px;
+  }
 }

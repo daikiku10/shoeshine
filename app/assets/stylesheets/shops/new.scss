@@ -51,9 +51,11 @@
 }
 
 .back-btn {
+  width: 100%;
   background-color: rgb(75, 71, 71);
   border: 1px solid #aaa;
-  color: #fff;
+  color: white;
   text-decoration: none;
-  padding: 15px 35%;
+  cursor: pointer;
+  padding: 15px 5vw;
 }

@@ -1,12 +1,14 @@
 .shop-btn-child {
   margin-bottom: 4vh;
+  width: 100%;
 }
 
 .delete-btn{
+  width: 100%;
   background-color: rgb(75, 71, 71);
   border: 1px solid #aaa;
   color: #fff;
   text-decoration: none;
-  padding: 15px 35%;
+  padding: 15px 5vw;
   cursor: pointer;
 }
