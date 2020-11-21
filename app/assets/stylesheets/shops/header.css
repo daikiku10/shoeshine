@@ -33,6 +33,7 @@
 }
 
 .insta-login {
+  list-style: none;
   text-decoration: none;
   color: white;
   margin-right: 2vw;
@@ -42,6 +43,7 @@
 }
 
 .shop-name {
+  list-style: none;
   text-decoration: none;
   color: white;
   margin-right: 2vw;
@@ -51,6 +53,7 @@
 }
 
 .shop-register {
+  list-style: none;
   text-decoration: none;
   color: white;
   margin-right: 2vw;
@@ -60,6 +63,7 @@
 }
 
 .shop-edit {
+  list-style: none;
   text-decoration: none;
   color: white;
   margin-right: 2vw;
@@ -69,6 +73,7 @@
 }
 
 .logout {
+  list-style: none;
   text-decoration: none;
   color: white;
   border: 1px white solid;
@@ -77,6 +82,7 @@
 }
 
 .login {
+  list-style: none;
   text-decoration: none;
   color: white;
   margin-right: 2vw;
@@ -86,6 +92,7 @@
 }
 
 .sign-up {
+  list-style: none;
   text-decoration: none;
   color: white;
   border: 1px white solid;
