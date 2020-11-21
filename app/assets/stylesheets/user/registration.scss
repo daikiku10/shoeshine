@@ -89,3 +89,10 @@
   cursor: pointer;
   margin-bottom: 4vh;
 }
+
+/* タブレット・スマホ表示 */
+@media (max-width: 1024px) {
+  .form-wrap {
+    width: 80%;
+  }
+}
