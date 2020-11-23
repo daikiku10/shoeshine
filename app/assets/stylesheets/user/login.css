@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.login-red-btn {
+.login-black-btn {
   width: 100%;
   background: #333333;
   border: 1px solid white;
@@ -23,7 +23,7 @@
 }
 
 @media (max-width: 1024px) {
-  .login-red-btn {
+  .login-black-btn {
     font-size: 10px;
     padding: 8px 5vw;
   }
