@@ -55,13 +55,13 @@ RSpec.describe Shop, type: :model do
     it 'latが空だと登録できない' do
       @shop.lat = nil
       @shop.valid?
-      expect(@shop.errors.full_messages).to include("Lat can't be blank")
+      expect(@shop.errors.full_messages).to include("Lat 指定場所を地図にクリックしてください")
     end
 
     it 'lngが空だと登録できない' do
       @shop.lng = nil
       @shop.valid?
-      expect(@shop.errors.full_messages).to include("Lng can't be blank")
+      expect(@shop.errors.full_messages).to include()
     end
   end
 end
