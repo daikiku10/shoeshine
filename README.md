@@ -27,11 +27,11 @@
 こういった人たちの悩みを解決します。
 
 ## 洗い出した要件
-| 機能            | 目的                                        | 詳細 |
-| -------------- | ------------------------------------------- | ---- |
+| 機能            | 目的                                        | 詳細                                                    |
+| -------------- | ------------------------------------------- | ------------------------------------------------------ |
 | 企業新規登録     | GoogleMapに店舗情報を反映させるため             | 店舗の住所や、インスタグラムのユーザーネームを登録するカラムにする |
-| GoogleMap(API) | GoogleMapがメインページになるから               | 登録した店舗の住所を元にGoogleMapへ反映させる    |
-| 詳細ページ       | GoogleMapに反映している店舗の詳細を表示させるため | Mapにあるマーカーをクリックして店舗が登録したデータを表示させる |
+| GoogleMap(API) | GoogleMapがメインページになるから               | 登録した店舗の住所を元にGoogleMapへ反映させる                |
+| 詳細ページ       | GoogleMapに反映している店舗の詳細を表示させるため | Mapにあるマーカーをクリックして店舗が登録したデータを表示させる   |
 | Instagramへ誘導 | 詳細ページから直接Instagramへログインするため     | 詳細ページに載っているインスタユーザーネームをクリックしただけでインスタへ移動できれば時間短縮できる |
 
 ## 実装した機能についてのGIFと説明
@@ -39,19 +39,29 @@
 ## 実装予定の機能
 
 ## データベース設計
-
-## ローカルでの動作方法
-
-## usersテーブル
+** usersテーブル **
 | Column             | Type    | Options                   |
 | ------------------ | ------- | ------------------------- |
+| user_name          | string  | null: false               |
 | shop_name          | string  | null: false               |
 | email              | string  | null: false               |
 | encrypted_password | string  | null: false               |
-| instagram          | string  | null: false               |
-| homepage           | string  | null: false               |
-| phone_number       | string  | null: false               |
-| prefecture_id      | integer | null: false               |
-| city               | string  | null: false               |
-| house_number       | string  | null: false               |
-| building_name      | string  |                           |
+
+** Association **
+- has_many :shops
+
+** shopsテーブル **
+| Column       | Type        | Options                        |
+| ------------ | ----------- | ------------------------------ |
+| address      | string      | null: false                    |
+| instagram    | string      | null: false                    |
+| phone_number | string      | null: false                    |
+| lat          | float       | null: false                    |
+| lng          | float       | null: false                    |
+| user         | references  | null: false, foreign_key: true |
+
+** Association **
+- belongs_to :user
+
+## ローカルでの動作方法
+
