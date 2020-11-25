@@ -1,4 +1,5 @@
 # shoeshine
+![top-page](https://i.gyazo.com/39ce468ddff4a970de6d84e412f303be.png)
 
 ## 概要
 靴磨き店舗と磨いて欲しいお客様をInstagramへ繋げます。  
