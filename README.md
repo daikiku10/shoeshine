@@ -44,7 +44,13 @@
 **②店舗登録機能**
 - 企業側が店舗登録をする
 - 登録した店舗がトップページに反映される
-![shop-register](https://user-images.githubusercontent.com/72244748/100238940-2184df80-2f74-11eb-9a4a-5d1afa27b3e5.gif)
+- 登録後は登録編集が可能となる
+![shop-register](https://user-images.githubusercontent.com/72244748/100238940-2184df80-2f74-11eb-9a4a-5d1afa27b3e5.gif)  
+
+**③詳細情報の表示**
+- トップページに表示されているマーカーをクリックすると詳細情報が確認できる
+![shop-show](https://user-images.githubusercontent.com/72244748/100240278-bb995780-2f75-11eb-8284-9aa4b84f6a5f.gif)
+
 
 ## 実装予定の機能
 - GoogleMapに現在地を表示させる機能を図る
