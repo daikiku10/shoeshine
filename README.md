@@ -39,7 +39,12 @@
 **①企業登録機能**
 - 企業側のみが登録をする
 - 登録後はログイン・ログアウト・登録編集が可能となる
-![devise](https://user-images.githubusercontent.com/72244748/100237948-f1890c80-2f72-11eb-99fd-9e2ab60f5e8c.gif)
+![devise](https://user-images.githubusercontent.com/72244748/100237948-f1890c80-2f72-11eb-99fd-9e2ab60f5e8c.gif)  
+
+**②店舗登録機能**
+- 企業側が店舗登録をする
+- 登録した店舗がトップページに反映される
+![shop-register](https://user-images.githubusercontent.com/72244748/100238940-2184df80-2f74-11eb-9a4a-5d1afa27b3e5.gif)
 
 ## 実装予定の機能
 - GoogleMapに現在地を表示させる機能を図る
