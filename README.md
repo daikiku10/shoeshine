@@ -39,7 +39,7 @@
 ## 実装予定の機能
 
 ## データベース設計
-**usersテーブル
+**usersテーブル**
 | Column             | Type    | Options                   |
 | ------------------ | ------- | ------------------------- |
 | user_name          | string  | null: false               |
@@ -47,10 +47,10 @@
 | email              | string  | null: false               |
 | encrypted_password | string  | null: false               |
 
-**Association
+**Association**
 - has_many :shops
 
-**shopsテーブル
+**shopsテーブル**
 | Column       | Type        | Options                        |
 | ------------ | ----------- | ------------------------------ |
 | address      | string      | null: false                    |
@@ -60,7 +60,7 @@
 | lng          | float       | null: false                    |
 | user         | references  | null: false, foreign_key: true |
 
-**Association
+**Association**
 - belongs_to :user
 
 ## ローカルでの動作方法
