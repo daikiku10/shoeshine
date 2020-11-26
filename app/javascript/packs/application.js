@@ -10,6 +10,7 @@ require("channels")
 require("../map")
 require("../click")
 require("../btn")
+require("../show")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
