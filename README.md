@@ -121,3 +121,12 @@ Instagramをやっていない方は、Instagramでアカウントを作成後�
 
 ## ローカルでの動作方法
 
+**ターミナル**
+```
+% git clone https://github.com/daikiku10/shoeshine.git
+% cd shoeshine
+% bundle install
+%
+% rails db:create
+% rails db:migrate
+```
