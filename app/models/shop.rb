@@ -3,6 +3,7 @@ class Shop < ApplicationRecord
   after_validation :remove_unnecessary_error_messages
 
   with_options presence: true do
+    validates :shop_name
     validates :address, length: {maximum: 40}
     validates :instagram, length: {maximum: 30}
     validates :phone_number, format: {with: /\A\d{10}$|^\d{11}\z/}
