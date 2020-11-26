@@ -10,7 +10,7 @@ function initMap(){
   //データベースに登録されている緯度経緯にマーカーを立てる
   const shopsArray = Array.from(gon.shops);
   const usersArray = Array.from(gon.users);
-  for(let i = 0; i < shopsArray.length; i++){
+  for(let i = 0; i <= shopsArray.length; i++){
     const marker = new google.maps.Marker({
       position: {lat: shopsArray[i].lat, lng: shopsArray[i].lng },
       map: map,
