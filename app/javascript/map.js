@@ -24,6 +24,7 @@ function initMap(){
                             <li>店舗住所：${shopsArray[i].address}</li>
                             <li>インスタグラムユーザー名：${shopsArray[i].instagram}</li>
                           </ul>`;
+                          
       const infoWindow = new google.maps.InfoWindow({
         content: contentStr
       });
