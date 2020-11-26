@@ -20,7 +20,7 @@ function initMap(){
     //マーカーをクリックしたら詳細情報が表示される
     google.maps.event.addListener(marker, "click", function(){
       const contentStr = `<ul>
-                            <li>店舗名：${usersArray[shopsArray[i].user_id - 1].shop_name}</li>
+                            <li>店舗名：${usersArray[(shopsArray[i].user_id) - 1].shop_name}</li>
                             <li>店舗住所：${shopsArray[i].address}</li>
                             <li>インスタグラムユーザー名：${shopsArray[i].instagram}</li>
                           </ul>`;
