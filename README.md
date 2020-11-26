@@ -117,5 +117,7 @@ Instagramをやっていない方は、Instagramでアカウントを作成後�
 **Association**
 - belongs_to :user
 
+![er](https://i.gyazo.com/28e0a57adec4d8190602a226159ff1f1.png)
+
 ## ローカルでの動作方法
 
