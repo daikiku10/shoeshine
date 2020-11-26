@@ -126,7 +126,7 @@ Instagramをやっていない方は、Instagramでアカウントを作成後�
 % git clone https://github.com/daikiku10/shoeshine.git
 % cd shoeshine
 % bundle install
-%
+% yarn install
 % rails db:create
 % rails db:migrate
 ```
