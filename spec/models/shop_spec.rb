@@ -9,6 +9,12 @@ RSpec.describe Shop, type: :model do
     it 'すべての値が入力されていれば登録できる' do
       expect(@shop).to be_valid
     end
+
+    it 'shop_nameが空では登録できない' do
+      @shop.shop_name = nil
+      @shop.valid?
+      expect(@shop.errors.full_messages).to include("Shop name can't be blank")
+    end
     
     it 'addressが空では登録できない' do
       @shop.address = nil

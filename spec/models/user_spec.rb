@@ -22,12 +22,6 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("User name is invalid")
     end
 
-    it 'shop_nameが空では登録できない' do
-      @user.shop_name = nil
-      @user.valid?
-      expect(@user.errors.full_messages).to include("Shop name can't be blank")
-    end
-
     it 'emailが空では登録できない' do
       @user.email = nil
       @user.valid?
