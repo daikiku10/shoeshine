@@ -97,7 +97,6 @@ Instagramをやっていない方は、Instagramでアカウントを作成後�
 | Column             | Type    | Options                   |
 | ------------------ | ------- | ------------------------- |
 | user_name          | string  | null: false               |
-| shop_name          | string  | null: false               |
 | email              | string  | null: false               |
 | encrypted_password | string  | null: false               |
 
@@ -107,6 +106,7 @@ Instagramをやっていない方は、Instagramでアカウントを作成後�
 **shopsテーブル**
 | Column       | Type        | Options                        |
 | ------------ | ----------- | ------------------------------ |
+| shop_name    | string      | null: false                    |
 | address      | string      | null: false                    |
 | instagram    | string      | null: false                    |
 | phone_number | string      | null: false                    |
@@ -117,7 +117,7 @@ Instagramをやっていない方は、Instagramでアカウントを作成後�
 **Association**
 - belongs_to :user
 
-![er](https://i.gyazo.com/28e0a57adec4d8190602a226159ff1f1.png)
+![er](https://i.gyazo.com/1ff78029b5bdcc31080c935962750901.png)
 
 ## ローカルでの動作方法
 
