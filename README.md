@@ -12,6 +12,13 @@
 開発環境
 - MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)
 - macOS Catalina (10.15.7)
+- Ruby
+- Ruby on Rails
+- JavaScript
+- MySQL
+- GitHub
+- Heroku
+- Visual Studio Code
 
 ## App URL
 【URL】：https://shoeshine-27617.herokuapp.com/
