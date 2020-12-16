@@ -21,7 +21,7 @@
 - Visual Studio Code
 
 ## App URL
-[shoeshine](18.179.187.133)
+[shoeshine](http://18.179.187.133)
 
 ## テスト用アカウント
 **ユーザー側**  
