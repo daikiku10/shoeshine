@@ -7,7 +7,28 @@ RSpec.describe 'ユーザー新規登録', type: :system do
 
   context 'ユーザー新規登録ができるとき' do
     it '正しい情報を入力すればユーザー新規登録ができてトップページに移動する' do
-      
+      # トップページに移動する
+      visit root_path
+      # トップページにサインアップページへ遷移する「新規登録」ボタンがあることを確認する
+      expect(page).to have_content('新規登録')
+      # 新規登録ページへ移動する
+      visit new_user_registration_path
+      # 登録情報を入力する
+      fill_in 'user-name', with: @user.user_name
+      fill_in 'email', with: @user.email
+      fill_in 'password', with: @user.password
+      fill_in 'password-confirmation', with: @user.password_confirmation
+      # 「新規登録」ボタンを押すとユーザーモデルのカウントが1上がることを確認する
+      expect{
+        find('input[name="commit"]').click
+      }.to change {User.count}.by(1)
+      # トップページへ遷移する
+      expect(current_path).to eq root_path
+      # トップページにサインアウトする「ログアウト」ボタンがあることを確認する
+      expect(page).to have_content('ログアウト')
+      # 「ログイン」・「新規登録」ボタンが表示されていないことを確認する
+      expect(page).to have_no_content('ログイン')
+      expect(page).to have_no_content('新規登録')
     end
   end
   context 'ユーザー新規登録ができないとき' do
