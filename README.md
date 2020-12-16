@@ -17,11 +17,11 @@
 - JavaScript
 - MySQL
 - GitHub
-- Heroku
+- AWS
 - Visual Studio Code
 
 ## App URL
-【URL】：https://shoeshine-27617.herokuapp.com/
+[shoeshine](18.179.187.133)
 
 ## テスト用アカウント
 **ユーザー側**  
@@ -98,7 +98,6 @@ Instagramをやっていない方は、Instagramでアカウントを作成後�
 ## 実装予定の機能
 - GoogleMapに現在地を表示させる機能を図る
 - 結合テストを実装し、アプリケーションの安全性を確保する
-- AWSのサーバーへ変更
 
 ## データベース設計
 **usersテーブル**
